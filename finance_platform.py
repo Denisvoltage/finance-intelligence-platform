@@ -105,8 +105,8 @@ if not st.session_state.logged_in:
 
 else:
 
-    # Sidebar greeting
-    st.sidebar.title(f"👋 Welcome {st.session_state.username} (Denis)")
+    # Sidebar greeting (without Denis)
+    st.sidebar.title(f"👋 Welcome {st.session_state.username}")
 
     if st.sidebar.button("Logout"):
         st.session_state.logged_in = False
@@ -154,10 +154,10 @@ else:
         st.rerun()
 
     # -------------------------
-    # DASHBOARD
+    # DASHBOARD HEADER (without Denis)
     # -------------------------
 
-    st.title("📊 Financial Dashboard - Denis")
+    st.title("📊 Financial Dashboard")
 
     income = df[df.Type=="Income"]["Amount"].sum()
     expense = df[df.Type=="Expense"]["Amount"].sum()
@@ -324,7 +324,7 @@ else:
     )
 
     # -------------------------
-    # FOOTER / CREDIT
+    # FOOTER / CREDIT (Denis Dias)
     # -------------------------
     st.markdown("---")
-    st.markdown("<center>💻 Created by <b>Denis</b></center>", unsafe_allow_html=True)
+    st.markdown("<center>💻 <i>Created by Denis Dias</i></center>", unsafe_allow_html=True)
