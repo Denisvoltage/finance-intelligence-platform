@@ -73,7 +73,7 @@ if "username" not in st.session_state:
 
 if not st.session_state.logged_in:
 
-    st.title("💰 Finance Intelligence Platform - Denis")
+    st.title("💰 Finance Intelligence Platform by Denis")
     st.subheader("AI Powered Personal Finance Dashboard")
 
     menu = st.radio("Select Option",["Login","Create Account"])
